@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/textNameView"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/editName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewFirstName"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="First Name" />
+
+        <TextView
+            android:id="@+id/textViewLastName"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:text="Last Name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editName"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNameView">
+
+
+        <EditText
+            android:id="@+id/LastName"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="#FFBDBABA"
+            android:backgroundTint="#D6D5D5"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:hint="Last Name" />
+
+        <EditText
+            android:id="@+id/FirstName"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#D6D5D5"
+            android:backgroundTint="#D6D5D5"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:hint="First Name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/genderLayout"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editName">
+
+        <TextView
+            android:id="@+id/genderBtn"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="Gender"
+            android:gravity="center"/>
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+                android:text="Female" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutDob"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderLayout">
+
+
+        <TextView
+            android:id="@+id/tvBirthday"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="Birthday"
+            android:layout_marginTop="15dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutDobInput"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutDob">
+
+
+        <EditText
+            android:id="@+id/dob"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="#D6D5D5"
+            android:backgroundTint="#D6D5D5"
+            android:hint="Birthday"
+            android:importantForAutofill="no"
+            android:inputType="date" />
+        <Button
+            android:id="@+id/btn_dob"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Select"
+            android:background="@color/white"
+            android:backgroundTint="@color/white">
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutAd"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutDobInput">
+
+
+        <TextView
+            android:id="@+id/tvAdress"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="Adress"
+            android:layout_marginTop="15dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutAdress"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAd">
+
+
+    <EditText
+        android:id="@+id/adress"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="#D6D5D5"
+        android:backgroundTint="#D6D5D5"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:hint="Adress"
+        android:layout_marginRight="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutEmail"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAdress">
+
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="Email"
+            android:layout_marginTop="15dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutEmailInput"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEmail">
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="#D6D5D5"
+            android:backgroundTint="#D6D5D5"
+            android:hint="Email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutCheckbox"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEmailInput">
+
+        <CheckBox
+            android:id="@+id/checkBoxAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I Agree to Terms of Use" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutRegister"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutCheckbox">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="match_parent">
+
+        </TextView>
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
